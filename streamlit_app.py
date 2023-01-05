@@ -38,6 +38,9 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # display
 streamlit.dataframe(fruityvice_normalized)
 
+#stop
+streamlit.stop()
+
 #adding snowflake to the pic
 import snowflake.connector
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
